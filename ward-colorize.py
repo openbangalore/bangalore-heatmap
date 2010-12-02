@@ -5,17 +5,8 @@
 import csv
 from BeautifulSoup import BeautifulSoup
 # Read in ward data
-ward_values = {}
-reader = csv.reader(open('ward.csv'), delimiter=",")
-for row in reader:
-    #print row 	
-    try:
-        ward_id = row[0] 
-        ward_value = row[1] 
-        ward_values[ward_id] = ward_value
-    except:
-        pass
-#print ward_values 	
+ward_values = dict(csv.reader(open('ward.csv')))
+
 # Load the SVG map
 svg = open('bbmp-ward.svg', 'r').read()
 # Load into Beautiful Soup
