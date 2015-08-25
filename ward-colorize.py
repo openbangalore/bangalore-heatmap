@@ -21,8 +21,11 @@ svg = etree.parse('bbmp-ward.svg')
 # Set the namespaces used
 ns = {'svg':'http://www.w3.org/2000/svg'}
 
-# Map colors
-colors = ["#F1EEF6", "#D4B9DA", "#C994C7", "#DF65B0", "#DD1C77", "#980043"]
+# Map colors - MFO
+#colors = ["#F1EEF6", "#D4B9DA", "#C994C7", "#DF65B0", "#DD1C77", "#980043"]
+
+# Map colors - PARTY, BJP1, INC2, JDS3, IND4 Others5
+colors = ["#000000","#fc7f19", "#1475c4","#1dc414", "#f7f30a", "#f70ad7","#f70ad7"]
 
 # Color the counties based on unemployment rate
 for ward_id, ward_value in csv.reader(source):
